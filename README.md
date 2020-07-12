@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of contents
 
-- [adonis-mailbuilder](#adonis-mailbuilder)
+- [AdonisJS 5 mailbuilder](#adonisjs-5-mailbuilder)
   - [Installation](#installation)
   - [Create yor first mail](#create-yor-first-mail)
   - [Emails visual tests](#emails-visual-tests)
@@ -10,13 +10,15 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# adonis-mailbuilder
-> Tagline
+# AdonisJS 5 mailbuilder
+> Adonis, mailbuilder, mailgen, livereloading
 
 [![travis-image]][travis-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url]
 
+[![How it works](http://img.youtube.com/vi/MMeL8VLLdv0/0.jpg)](http://www.youtube.com/watch?v=MMeL8VLLdv0 "How it works")
+
 - Declarative creation of mails in classes (based on mailgen)
-- Livereload as CLI command (for quickly devloping your emails)
+- **Livereload** as CLI command (for quickly devloping your emails)
 - Mock data for tests (so that letters developed through livereload correspond to real letters that will go to the mail)
 - Naturally everywhere Typescript is used
 - CLI command to quickly create a Mailbuilder class based on the principle of "node ace make:model ModelName"
@@ -45,7 +47,7 @@ Go to app/MailBuilder/AnyName.ts and change options
 
 ## Emails visual tests
 ```bash
-node ace mailbuilder:serve AnyName
+node ace mailbuilder:serve
 ```
 
 ## Send your email
