@@ -1,7 +1,7 @@
 {
   "name": "adonis-mailbuilder",
-  "version": "1.0.0",
-  "description": "AdonisJS 5 mailbuilders",
+  "version": "1.0.1",
+  "description": "AdonisJS 5 mailbuilder",
   "scripts": {
     "pretest": "npm run lint",
     "test": "node japaFile.ts",
