@@ -7,6 +7,7 @@
   - [Create yor first mail](#create-yor-first-mail)
   - [Emails visual tests](#emails-visual-tests)
   - [Send your email](#send-your-email)
+  - [Docs for mailbuilder configuration](#docs-for-mailbuilder-configuration)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -71,6 +72,9 @@ export default class AuthController {
   }
 }
 ```
+
+## Docs for mailbuilder configuration
+[See docs](https://github.com/eladnava/mailgen)
 
 [travis-image]: https://img.shields.io/travis/reg2005/adonis-mailbuilder/master.svg?style=for-the-badge&logo=travis
 [travis-url]: https://travis-ci.org/reg2005/adonis-mailbuilder "travis"
