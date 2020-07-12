@@ -6,6 +6,7 @@
   - [Installation](#installation)
   - [Create yor first mail](#create-yor-first-mail)
   - [Emails visual tests](#emails-visual-tests)
+  - [Send your email](#send-your-email)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -14,7 +15,11 @@
 
 [![travis-image]][travis-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url]
 
-A short brief
+- Declarative creation of mails in classes (based on mailgen)
+- Livereload as CLI command (for quickly devloping your emails)
+- Mock data for tests (so that letters developed through livereload correspond to real letters that will go to the mail)
+- Naturally everywhere Typescript is used
+- CLI command to quickly create a Mailbuilder class based on the principle of "node ace make:model ModelName"
 
 ## Installation
 Install it:
@@ -32,15 +37,37 @@ node ace invoke adonis-mailbuilder
 
 ## Create yor first mail
 
-```
+```bash
 node ace mailbuilder:make AnyName
 ```
 
 Go to app/MailBuilder/AnyName.ts and change options
 
 ## Emails visual tests
-```
+```bash
 node ace mailbuilder:serve AnyName
+```
+
+## Send your email
+```js
+import MailBuilder from '@ioc:Adonis/Addons/MailBuilder'
+import AnyName from 'App/MailBuilder/AnyName'
+import Mail from '@ioc:Adonis/Addons/Mail'
+import Env from '@ioc:Adonis/Core/Env'
+export default class AuthController {
+  public async register ({ auth, request, response }: HttpContextContract) {
+    const { text, html } = await MailBuilder.render(
+      new AnyName({ name: 'AnyName' })
+    )
+    await Mail.send(mail => {
+        mail.subject('Thanks for registering')
+        mail.text(text)
+        mail.html(html)
+        mail.to(ctx.session.email)
+        mail.from(Env.get('MAIL_FROM') as string)
+    })
+  }
+}
 ```
 
 [travis-image]: https://img.shields.io/travis/reg2005/adonis-mailbuilder/master.svg?style=for-the-badge&logo=travis
