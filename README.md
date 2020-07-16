@@ -16,7 +16,7 @@
 
 [![travis-image]][travis-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url]
 
-[![How it works](http://img.youtube.com/vi/MMeL8VLLdv0/0.jpg)](http://www.youtube.com/watch?v=MMeL8VLLdv0 "How it works")
+[![How it works](https://img.youtube.com/vi/MMeL8VLLdv0/0.jpg)](https://www.youtube.com/watch?v=MMeL8VLLdv0 "How it works")
 
 - Declarative creation of mails in classes (based on mailgen)
 - **Livereload** as CLI command (for quickly devloping your emails)
