@@ -7,18 +7,18 @@
  * file that was distributed with this source code.
  */
 
-import { IocContract } from '@adonisjs/fold'
+import { ApplicationContract } from '@ioc:Adonis/Core/Application'
 import { MailBuilderManager } from '../src'
 
 /**
  * Mail provider to register mail specific bindings
  */
 export default class MailBuilderProvider {
-	constructor(protected container: IocContract) {}
+	constructor(protected application: ApplicationContract) {}
 
 	public register() {
-		this.container.singleton('Adonis/Addons/MailBuilder', () => {
-			const config = this.container.use('Adonis/Core/Config').get('mailbuilder', {})
+		this.application.container.singleton('Adonis/Addons/MailBuilder', () => {
+			const config = this.application.container.use('Adonis/Core/Config').get('mailbuilder', {})
 			return new MailBuilderManager(config)
 		})
 	}
