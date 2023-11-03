@@ -1,4 +1,4 @@
-import { MailBuilderInterface, MailBuilderMailOptionsInterface } from '@ioc:Adonis/Addons/MailBuilder'
+import type { MailBuilderInterface, MailBuilderMailOptionsInterface } from '@ioc:Adonis/Addons/MailBuilder'
 interface ConstructorDataInterface {
 	name: string
 }

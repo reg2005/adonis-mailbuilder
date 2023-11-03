@@ -1,15 +1,14 @@
 import { MailBuilderConfig } from '@ioc:Adonis/Addons/MailBuilder'
 const mailConfig: MailBuilderConfig = {
-	devPort: '3310', //For cmd "node ace mailbuilder:serve"
-	mailOption: {
-		theme: 'default',
-		product: {
-			// Appears in header & footer of e-mails
-			name: 'YourAppName',
-			link: 'https://twitter.com/evgeniy_ryumin',
-			// Optional product logo
-			logo: 'https://adonisjs.com/images/header-logo.svg',
-		},
-	},
+  mailOption: {
+    theme: 'default',
+    product: {
+      // Appears in header & footer of e-mails
+      name: 'YourAppName',
+      link: 'https://twitter.com/evgeniy_ryumin',
+      // Optional product logo
+      logo: 'https://adonisjs.com/images/header-logo.svg',
+    },
+  },
 }
 export default mailConfig

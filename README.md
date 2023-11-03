@@ -29,27 +29,23 @@ Install it:
 ```bash
 npm i --save adonis-mailbuilder
 ```
-Compile your code:
-```bash
-node ace serve --watch
-```
 Connect all dependences:
 ```bash
-node ace invoke adonis-mailbuilder
+node ace configure adonis-mailbuilder
 ```
-
 ## Create yor first mail
-
 ```bash
 node ace mailbuilder:make AnyName
 ```
 
-Go to app/MailBuilder/AnyName.ts and change options
 
-## Emails visual tests
+## Start dev server
 ```bash
-node ace mailbuilder:serve
+npm run dev
 ```
+Go to url from cli like 'http://localhost:3333/mailbuilder'
+
+Go to app/MailBuilder/AnyName.ts and change any options
 
 ## Send your email
 ```js

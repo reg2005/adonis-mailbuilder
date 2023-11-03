@@ -2,10 +2,12 @@ import { ApplicationContract } from '@ioc:Adonis/Core/Application'
 import { join } from 'path'
 import { promises } from 'fs'
 export function getMailBuilderCompiledClassesPath(app: ApplicationContract) {
-	return join(process.cwd(), '/build/', app.resolveNamespaceDirectory('mailbuilder') || 'app/MailBuilder')
+	const path = join(app.appRoot, 'app', 'MailBuilder')
+	return path
+	// return join(process.cwd(), '/build/', )
 }
 export function getMailBuilderAppClassesPath(app: ApplicationContract) {
-	return join(process.cwd(), app.resolveNamespaceDirectory('mailbuilder') || 'app/MailBuilder')
+	return getMailBuilderCompiledClassesPath(app)
 }
 export async function dirIsExists(path) {
 	try {

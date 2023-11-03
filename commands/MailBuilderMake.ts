@@ -29,7 +29,7 @@ export default class MailBuilderMake extends BaseCommand {
 	/**
 	 * Execute command
 	 */
-	public async handle(): Promise<void> {
+	public async run(): Promise<void> {
 		const templatePath = join(__dirname, `../templates/emailTemplate.txt`)
 		if (!this.name) {
 			throw new Error('Please provide name')
